@@ -1,0 +1,215 @@
+body, .home {
+  background-color: #F5F5DC; 
+  font-family: 'Arial', sans-serif; 
+}
+
+.register-link, .dashboard-link {
+  display: block;
+  margin-bottom: 10px;
+}
+
+
+.register-link {
+  margin-bottom: 20px; 
+}
+
+
+.header {
+  position: relative;
+  left: 0;
+  right: 0;
+  margin: 0; 
+  height: 30vh;
+  overflow: hidden;
+  background-color: #003366;
+  color: rgb(255, 255, 255); 
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  animation: slideDown 1s ease forwards;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 40px;
+  opacity: 1;
+  text-shadow: none;
+  z-index: 1; 
+}
+
+.header * {
+  color: inherit; 
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+
+.welcome-message {
+  text-align: center;
+  margin: 40px 0;
+  font-size: 1.2em;
+  color: black;
+}
+
+
+.video-text-container {
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
+  justify-content: center; 
+  text-align: center;
+  height: 100vh; 
+}
+
+.internship-item {
+  display: flex;
+  flex-direction: row; 
+  margin: 20px 0; 
+  border: 1px solid #000000;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease, opacity 0.5s ease; 
+  opacity: 0; 
+  transform: translateY(20px); 
+  height: 400px; 
+  box-sizing: border-box;
+}
+
+
+.internship-item + .internship-item {
+  margin-top: 90px; 
+}
+
+.internship-item.visible {
+  opacity: 1; 
+  transform: translateY(0); 
+}
+
+
+.video-section {
+  flex: 1;
+  height: 100%; 
+  overflow: hidden;
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+}
+
+.internship-video {
+  width: 100%; 
+  height: 100%;
+  object-fit: cover; 
+  
+}
+
+
+.info-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column; 
+  justify-content: center;
+  padding: 20px;
+  background-color: #acf3dd;
+  border-radius: 10px;
+  transition: background 0.3s ease, box-shadow 0.3s ease; 
+  position: relative; 
+  overflow: hidden; 
+  text-align: center;
+}
+
+
+.info-section h2,
+.info-section p {
+  position: relative; 
+  animation: none; 
+  transform-origin: center center; 
+  transition: transform 0.3s ease; 
+}
+
+.info-section:hover h2 {
+  transform: scale(1.1); 
+}
+
+.info-section:hover p {
+  transform: scale(1.05); 
+}
+
+
+.cta-button {
+  padding: 10px 20px;
+  background-color: #007B7F; 
+  color: white; 
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease; 
+}
+
+.dashboard-link {
+  margin-top: 20px;
+}
+
+.cta-button:hover {
+  background-color: #005f5f; 
+  transform: scale(1.05); 
+}
+
+
+.nav-link {
+  margin-right: 15px; 
+  text-decoration: none;
+  color: #ffffff; 
+  font-weight: bold;
+ 
+}
+
+.nav-link:last-child {
+  margin-right: 0; 
+}
+
+.dashboard-link {
+  margin-top: 20px;
+  text-decoration: none;
+  color: #ffffff; 
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .nav-link {
+    margin-right: 10px; 
+  }
+
+  .video-text-container {
+    flex-direction: column; 
+  }
+
+  .internship-item {
+    flex-direction: column; 
+    height: auto; 
+  }
+
+  .video-section, .info-section {
+    flex: none; 
+    width: 100%; 
+    height: auto; 
+  }
+
+  .internship-video {
+    width: 100%; 
+    height: auto; 
+  }
+
+  .info-section {
+    text-align: center;
+  }
+
+  .welcome-message {
+    font-size: 1em; 
+  }
+}
